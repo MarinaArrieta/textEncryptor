@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Text Encryptor</title>
+    <link rel="shortcut icon" type="image" href="./assets/ico.png" />
     <link rel="stylesheet" href="./style/style.css">
     <script src="https://kit.fontawesome.com/cd30d5437a.js" crossorigin="anonymous"></script>
 </head>
@@ -11,29 +12,36 @@
     <header>
         <h1>Text Encryptor</h1>
         <figure>
-            <img src="" alt="">
+            <img src="./assets/key.png" alt="Llave">
         </figure>
     </header>
     <main>
         <section>
-            <div>
-                <input type="text" placeholder="Ingrese el texto aqui">
+            <div class="input__text">
+                <input type="text" placeholder="Ingrese el texto aqui...">
             </div>
-            <div>
-                <div>
+            <div class="icon__p__button">
+                <div class="icon__p">
                     <i class="fa-solid fa-exclamation"></i>
                     <p>Solo letras minúsculas y sin acentos</p>
                 </div>
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <div class="buttons">
+                    <button>ENCRIPTAR</button>
+                    <button>DESENCRIPTAR</button>
+                </div>
             </div>
         </section>
-        <section>
-            <p>
-                <strong>Ningún mensaje fue encontrado</strong>
-            </p>
-            <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+        <section class="section__p">
+            <div>
+                <p>
+                    <strong>Ningún mensaje fue encontrado</strong>
+                </p>
+                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+            </div>
         </section>
     </main>
+    <footer>
+        <p>Developer Marina Arrieta</p>
+    </footer>
 </body>
 </html>
