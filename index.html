@@ -18,7 +18,7 @@
     <main>
         <section class="section__input__buttons">
             <div class="input__text">
-                <input id="input-text" type="text" placeholder="Ingrese el texto aqui...">
+                <input id="input__text" type="text" placeholder="Ingrese el texto aqui...">
             </div>
             <div class="icon__p">
                 <i class="fa-solid fa-exclamation"></i>
@@ -26,18 +26,19 @@
             </div>
             <div class="buttons">
                 <button id="encrypt">ENCRIPTAR</button>
-                <button>DESENCRIPTAR</button>
+                <button id="decrypt">DESENCRIPTAR</button>
             </div>
         </section>
         <section class="section__p">
             <div class="container__figure__p">
+                <p id="encrypt__text"></p>
                 <figure>
-                    <img src="./assets/loop.png" alt="Buscando">
+                    <img id="image" src="./assets/loop.png" alt="Buscando">
                 </figure>
-                <p>
-                    <strong>Ningún mensaje fue encontrado</strong>
+                <p id="text">
+                    <strong>Ningún mensaje fue encontrado</strong><br>
+                    Ingresa el texto que deseas encriptar o desencriptar.
                 </p>
-                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
             </div>
             <div class="buttons">
                 <button>COPIAR</button>
@@ -57,5 +58,6 @@
             </div>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
