@@ -70,3 +70,17 @@ function decryptString(cadena){
 decrypt.addEventListener('click', ()=> {
     decryptString();
 });
+
+function clipboardCopy() {
+
+    let copyTex = encrypText.innerText; 
+    navigator.clipboard.writeText(copyTex).then(function () {
+      alert('Texto copiado al portapapeles');
+    }).catch(function (err) {
+        alert('Error al copiar texto: ' + err);
+    });
+  }
+
+    document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("copy__button").addEventListener("click", clipboardCopy);
+});
