@@ -4,6 +4,8 @@ const image = document.getElementById('image');
 const encrypText = document.getElementById('encrypt__text');
 const text = document.getElementById('text');
 const decrypt = document.getElementById('decrypt');
+const messageAlertCat = document.getElementById('message__alert__cat');
+const close = document.getElementById('close');
 
 function messageAlert(character){
 
@@ -22,7 +24,8 @@ function messageAlert(character){
 
     for (i=0; i<character.length; i++){
         if (upperLetter.test(character[i]) || number.test(character[i]) || espessialcharacter.test(character[i]) && !tab.test(character[i])){
-            alert('Solo letras minúsculas, sin acentos ni characteres especiales');
+            // alert('Solo letras minúsculas, sin acentos ni characteres especiales');
+            messageAlertCat.style.display = 'flex';
             upperLetterNo = character.replace(upperLetter, '');
             numberNo = upperLetterNo.replace(number, '');
             espessialcharacterNo = numberNo.replace(espessialcharacter, '');
@@ -33,6 +36,10 @@ function messageAlert(character){
 
 inpuText.addEventListener('input', ()=>{
     messageAlert();
+});
+
+close.addEventListener('click', ()=> {
+    messageAlertCat.style.display = 'none';
 })
 
 function encript(encryptCharacter){
