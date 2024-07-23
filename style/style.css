@@ -15,8 +15,14 @@
 }
 
 body{
-    background-color: var(--dark-blue);
+    background-color: #232429;
     font-family: "Arimo", sans-serif;
+    background-image: radial-gradient(circle at 80% 0%, hsla(44, 100%, 25%, 1) 0%, transparent 50%), radial-gradient(circle at 94% 107%, hsl(204deg 84.16% 15.32%) 0%, transparent 50%), radial-gradient(circle at -50% 135%, #3b231b 20%, transparent 50%), url(/assets/inspo.jpg);
+    background-blend-mode: normal, normal;
+    background-color: hsl(225deg 10.53% 14.9%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header{
@@ -27,9 +33,10 @@ header{
 }
 
 h1{
-    color: var(--orange);
+    color: var(--light-orange);
     text-align: center;
     font-family: "Playwrite AU TAS", cursive;
+    /* font-family: "Space Grotesk", sans-serif;; */
     text-shadow: var(--text-shadow);
 }
 
@@ -49,13 +56,22 @@ img{
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
 .section__input__buttons{
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: rgb(255 254 251 / 21%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    --webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid #03A9F4;
+    padding: 20px 0px;
 }
 
 .input__text{
@@ -70,11 +86,14 @@ main{
     border-radius: 15px;
     border: 1px solid var(--dark-blue);
     box-shadow: var(--box-shadow);
-    background-color: var(--light-orange);
+    background-color: #081f2e;
+    font-family: "Arimo", sans-serif;
+    color: var(--light-orange);
+    font-weight: bolder;
 }
 
 .input__text input::placeholder {
-    color: #040455;
+    /* color: #040455; */
     font-size: 1.2em;
 }
 
@@ -88,6 +107,7 @@ main{
 }
 
 .icon__p p{
+    width: 75%;
     color: var(--light-orange);
 }
 
@@ -113,10 +133,13 @@ button{
     width: 80%;
     padding: 15px 0px;
     border-radius: 11px;
-    background: var(--orange);
-    box-shadow: var(--box-shadow);
+    background: #081f2e;
+    /* box-shadow: -2px -2px 0px 2px #000000, 3px 3px 3px 2px #040455; */
     font-weight: bold;
     font-family: "Arimo", sans-serif;
+    border-width: inherit;
+    border: 1px solid #03A9F4;
+    color: var(--light-orange);
 }
 
 button:hover{
@@ -124,11 +147,18 @@ button:hover{
 }
 
 .section__p{
-    width: 100%; 
+    width: 90%; 
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
+    background: rgb(255 254 251 / 21%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    --webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid #03A9F4;
+    padding: 20px 0px;
 }
 
 .container__figure__p{
@@ -136,7 +166,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: var(--light-orange);
+    background: #081f2e;
     border-radius: 15px;
     box-shadow: var(--box-shadow);
     padding: 15px;
@@ -150,19 +180,21 @@ button:hover{
 .section__p figure img{
     transform: none;
     filter: none;
+    width: 218px;
 }
 
 .section__p p{
     text-align: center;
+    color: var(--light-orange);
 }
 
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
-    margin: 35px 0px;
+    /* margin: 35px 0px; */
 }
 
 .container__footer__div{
@@ -170,7 +202,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--box-shadow);
+    /* box-shadow: var(--box-shadow); */
     border-radius: 5px;
     gap: 20px;
     padding: 15px 0px;
@@ -194,11 +226,12 @@ footer p{
 }
 
 .container__footer__div div i{
-    background-color: var(--dark-blue);
-    color: var(--light-orange);
+    /* background-color: var(--dark-blue); */
+    /* color: var(--light-orange); */
     font-size: 1.5rem;
     color: var(--orange);
-    text-shadow: 3px 4px 3px #040455;
+    background-color: unset;
+    /* text-shadow: 3px 4px 3px #040455; */
 }
 
 .container__footer__div div i:hover{
@@ -247,7 +280,7 @@ footer p{
     }
 
     .section__input__buttons {
-        width: 40%;
+        width: 40% !important;
     }
 
     .section__p {
