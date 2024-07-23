@@ -5,7 +5,11 @@ const encrypText = document.getElementById('encrypt__text');
 const text = document.getElementById('text');
 const decrypt = document.getElementById('decrypt');
 const messageAlertCat = document.getElementById('message__alert__cat');
+const messagealertCatHappy = document.getElementById('message__alert__cat__happy');
+const messagealertCatSad = document.getElementById('message__alert__cat__sad');
 const close = document.getElementById('close');
+const closeCatHappy = document.getElementById('close_cat_happy');
+const closeCatSad = document.getElementById('close__cat__sad');
 
 function messageAlert(character){
 
@@ -40,7 +44,15 @@ inpuText.addEventListener('input', ()=>{
 
 close.addEventListener('click', ()=> {
     messageAlertCat.style.display = 'none';
-})
+});
+
+closeCatHappy.addEventListener('click', ()=> {
+    messagealertCatHappy.style.display = 'none';
+});
+
+closeCatSad.addEventListener('click', ()=> {
+    messagealertCatSad.style.display = 'none';
+});
 
 function encript(encryptCharacter){
     image.style.display = 'none';
@@ -56,7 +68,6 @@ function encript(encryptCharacter){
         encryptCharacter2 = encryptCharacter.replaceAll('a', 'ai').replaceAll('e', 'enter').replaceAll(/i/ig, 'imes').replaceAll('o', 'ober').replaceAll('u', 'ufat');
         encryptCharacter3 = encryptCharacter2.replaceAll('aimes', 'ai');
     }
-
     return encrypText.textContent = encryptCharacter3;
 }
 
@@ -65,7 +76,7 @@ encrypt.addEventListener('click', ()=> {
 });
 
 function decryptString(decryptCharacter){
-    decryptCharacter = encrypText.innerText;
+    decryptCharacter = inpuText.value;
     let decryptCharacter2 = [];
 
     for (i=0; i<decryptCharacter.length; i++){
@@ -75,17 +86,35 @@ function decryptString(decryptCharacter){
     return encrypText.textContent = decryptCharacter2;
 }
 
+function decryptStringInput(decryptCharacterInput){
+    image.style.display = 'none';
+    text.style.display = 'none';
+    encrypText.style.display = 'block';
+
+    decryptCharacterInput = encrypText.innerText;
+    let decryptCharacterInput3 = [];
+
+    for (i=0; i<decryptCharacterInput.length; i++){
+        decryptCharacterInput3 = decryptCharacterInput.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll(/imes/ig, 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u');
+    }
+
+    return encrypText.textContent = decryptCharacterInput3;
+}
+
 decrypt.addEventListener('click', ()=> {
     decryptString();
+    decryptStringInput();
 });
 
 function clipboardCopy() {
 
     let copyTex = encrypText.innerText; 
     navigator.clipboard.writeText(copyTex).then(function () {
-      alert('Texto copiado al portapapeles');
+    //   alert('Texto copiado al portapapeles');
+        messagealertCatHappy.style.display = 'flex';
     }).catch(function (err) {
-        alert('Error al copiar texto: ' + err);
+        // alert('Error al copiar texto: ' + err);
+        messagealertCatSad.style.display = 'flex' + err;
     });
   }
 
