@@ -28,7 +28,6 @@ function messageAlert(character){
 
     for (i=0; i<character.length; i++){
         if (upperLetter.test(character[i]) || number.test(character[i]) || espessialcharacter.test(character[i]) && !tab.test(character[i])){
-            // alert('Solo letras minúsculas, sin acentos ni characteres especiales');
             messageAlertCat.style.display = 'flex';
             upperLetterNo = character.replace(upperLetter, '');
             numberNo = upperLetterNo.replace(number, '');
@@ -110,10 +109,8 @@ function clipboardCopy() {
 
     let copyTex = encrypText.innerText; 
     navigator.clipboard.writeText(copyTex).then(function () {
-    //   alert('Texto copiado al portapapeles');
         messagealertCatHappy.style.display = 'flex';
     }).catch(function (err) {
-        // alert('Error al copiar texto: ' + err);
         messagealertCatSad.style.display = 'flex' + err;
     });
   }
