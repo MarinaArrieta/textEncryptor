@@ -117,7 +117,7 @@ i{
     justify-content: center;
     align-items: center;
     background-color: var(--orange);
-    color: var(--dark-blue);
+    color:  var(--light-orange);
     width: 17px;
     border-radius: 10px;
 }
